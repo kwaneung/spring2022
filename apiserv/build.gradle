@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.test'
+group = 'com.kwaneung'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 

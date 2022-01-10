@@ -1,10 +1,10 @@
-package com.test.kwaneung;
+package com.kwaneung.apiserv;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KwaneungApplicationTests {
+class ApiservApplicationTests {
 
 	@Test
 	void contextLoads() {

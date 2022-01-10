@@ -5,10 +5,10 @@
 - Language : Java
 - Spring Boot : 2.6.2
 - Project Metadata
-  - Group : com.test
-  - Artifact : kwaneung
-  - Name : kwaneung
-  - Description : kwaneung project for Spring Boot
-  - Package name : com.test.kwaneung
+  - Group : com.kwaneung
+  - Artifact : apiserv
+  - Name : apiserv
+  - Description : demo project for Spring Boot
+  - Package name : com.kwaneung.apiserv
   - Pakaging : Jar
   - Java : 17
