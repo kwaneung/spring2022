@@ -1,6 +1,7 @@
 # spring2022
 > https://start.spring.io/
 
+
 - Project : Gradle Project
 - Language : Java
 - Spring Boot : 2.6.2
@@ -13,3 +14,4 @@
   - Pakaging : Jar
   - Java : 17
 - plugin : Spring Web, Lombok
+- IDE : IntelliJ
