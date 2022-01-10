@@ -12,3 +12,6 @@
   - Package name : com.test.kwaneung
   - Pakaging : Jar
   - Java : 17
+
+- Tool : InteliJ(Tomcat Plugin)
+- Tomcat : 9
