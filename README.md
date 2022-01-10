@@ -12,3 +12,4 @@
   - Package name : com.kwaneung.apiserv
   - Pakaging : Jar
   - Java : 17
+- plugin : Spring Web, Lombok
