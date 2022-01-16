@@ -1,10 +1,10 @@
 package com.kwaneung.apiserv.user.service;
 
-import com.kwaneung.apiserv.user.dto.UserInfoDto;
+import com.kwaneung.apiserv.user.dto.UserDto;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TestService {
+public class UserService {
 
     public String myName(String name) {
         if (name != null) {
@@ -30,12 +30,12 @@ public class TestService {
         }
     }
 
-    public String myInfo(UserInfoDto userInfoDto){
-        userInfoDto.setName("test");
-        return myName("name : " + userInfoDto.getName()) + "\nage : " + myAge(userInfoDto.getAge()) + "\nrole : " + myRole(userInfoDto.getRole());
+    public String myInfo(UserDto userDto){
+        userDto.setName("test");
+        return myName("name : " + userDto.getName()) + "\nage : " + myAge(userDto.getAge()) + "\nrole : " + myRole(userDto.getRole());
     }
 
-    public String myInfoWithaddress(String address, UserInfoDto userInfoDto){
-        return myInfo(userInfoDto) + "\naddress : " + address;
+    public String myInfoWithaddress(String address, UserDto userDto){
+        return myInfo(userDto) + "\naddress : " + address;
     }
 }
