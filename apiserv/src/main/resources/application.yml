@@ -8,6 +8,14 @@ spring:
     name: rest-api
   profiles:
     active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/apisrv?&serverTimezone=UTC&autoReconnect=true&allowMultiQueries=true&characterEncoding=UTF-8
+    username: apisrv
+    passwd: zaq1@WSX
+mybatis:
+  mapper-locations: classpath:mapper/**.xml
+
 
 ---
 
@@ -16,3 +24,10 @@ spring:
     name: rest-api
   profiles:
     active: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/apisrv?&serverTimezone=UTC&autoReconnect=true&allowMultiQueries=true&characterEncoding=UTF-8
+    username: apisrv
+    passwd: zaq1@WSX
+mybatis:
+  mapper-locations: classpath:mapper/**.xml
