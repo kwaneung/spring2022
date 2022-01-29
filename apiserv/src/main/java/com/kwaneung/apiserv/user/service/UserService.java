@@ -1,10 +1,23 @@
 package com.kwaneung.apiserv.user.service;
 
 import com.kwaneung.apiserv.user.dto.UserDto;
+import com.kwaneung.apiserv.user.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
+    private final UserMapper userMapper;
+
+    public UserService(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
+    public List<UserDto> getUserList() {
+        return userMapper.selectUserList();
+    }
 
     public String myName(String name) {
         if (name != null) {
@@ -31,8 +44,8 @@ public class UserService {
     }
 
     public String myInfo(UserDto userDto){
-        userDto.setName("test");
-        return myName("name : " + userDto.getName()) + "\nage : " + myAge(userDto.getAge()) + "\nrole : " + myRole(userDto.getRole());
+        userDto.setUser_name("test");
+        return myName("name : " + userDto.getUser_name()) + "\nage : " + myAge(userDto.getUser_age()) + "\nrole : " + myRole(userDto.getUser_role());
     }
 
     public String myInfoWithaddress(String address, UserDto userDto){

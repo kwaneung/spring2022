@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -15,23 +17,28 @@ public class UserController {
         this.userService = userService;
     }
 
+    @GetMapping("/test")
+    public List<UserDto> getUserList() {
+        return userService.getUserList();
+    }
+
     @GetMapping("/name")
-    ResponseEntity<?> getHelloWorld(@RequestParam(required = false) String name){
+    ResponseEntity<?> getName(@RequestParam(required = false) String name){
         return new ResponseEntity<>(userService.myName(name), HttpStatus.OK);
     }
 
     @PostMapping("/age/{age}")
-    ResponseEntity<?> postHelloWorld(@PathVariable("age") Integer age){
+    ResponseEntity<?> postAge(@PathVariable("age") Integer age){
         return new ResponseEntity<>(userService.myAge(age),HttpStatus.OK);
     }
 
     @PutMapping("/info")
-    ResponseEntity<?> putHelloWorld(@RequestBody UserDto userDto){
+    ResponseEntity<?> putInfo(@RequestBody UserDto userDto){
         return new ResponseEntity<>(userService.myInfo(userDto),HttpStatus.OK);
     }
 
     @DeleteMapping("/name")
-    ResponseEntity<?> deleteHelloWorld(@RequestHeader String address, @RequestBody UserDto userDto){
+    ResponseEntity<?> deleteAddInfo(@RequestHeader String address, @RequestBody UserDto userDto){
         return new ResponseEntity<>(userService.myInfoWithaddress(address, userDto),HttpStatus.OK);
     }
 }
